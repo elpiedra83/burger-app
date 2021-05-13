@@ -2,8 +2,17 @@
   max-width: 60rem;
   width: 90%;
   margin: 2rem auto;
-  animation: bottomAppear 750ms ease-in forwards;
-  position: relative;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.MealsLoading {
+  text-align: center;
+  color: white;
+}
+
+.MealsError {
+  text-align: center;
+  color: red;
 }
 
 .meals ul {
@@ -12,12 +21,14 @@
   padding: 0;
 }
 
-@keyframes bottomAppear {
-  0% {
-    bottom: -100vh;
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
   }
 
-  100% {
-    bottom: 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
